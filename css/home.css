@@ -1,0 +1,253 @@
+/* ---------------- RESET GENERAL ---------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------------- FUENTES ---------------- */
+@font-face {
+  font-family: Darleston;
+  src: url(fonts/Darleston.woff2) format('opentype');
+}
+
+@font-face {
+  font-family: Baskerville;
+  src: url(fonts/Baskerville.woff2) format('opentype');
+}
+
+/* ---------------- COLORES ---------------- */
+:root{
+  --main-bg-color: #274F37;
+  --secondary-color: #FFFDF4;
+  --text-color : #28352D;
+}
+
+/* =========================
+   SECCIONES TIPO HOJA PDF
+========================= */
+.home-container,
+.details,
+.dresscode-container,
+.container,
+.info-adicional {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 1.5rem;
+}
+
+/* ---------------- HOME ---------------- */
+.home-container {
+  position: relative;
+  background-image: url("../img/home_bg.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.notas{
+  font-family: Baskerville;
+  font-size: clamp(15px, 4vw, 24px);
+  color: var(--text-color);
+}
+
+.fecha{
+  font-family: Baskerville;
+  font-size: 26px;
+  color: var(--main-bg-color);
+}
+
+/* SOBRE */
+.envelope {
+  position: absolute;
+  width: 85%;
+  max-width: 420px;
+  z-index: 1;
+}
+
+/* TARJETA */
+.invitation-card {
+  position: relative;
+  z-index: 2;
+  background-color: var(--secondary-color);
+  padding: 2rem;
+  border-radius: 12px;
+  width: 85%;
+  max-width: 380px;
+  text-align: center;
+  color: var(--text-color);
+}
+
+/* ---------------- TÍTULOS ---------------- */
+.title{
+  font-family: Darleston;
+  color: var(--main-bg-color);
+  font-size: clamp(40px, 5vw, 60px);
+}
+
+.main-title{
+  font-family: Darleston;
+  color: var(--main-bg-color);
+  font-size: clamp(45px, 6vw, 70px);
+}
+
+/* ---------------- DETALLES ---------------- */
+.details {
+  background-color: var(--secondary-color);
+  gap: 2rem;
+}
+
+.detail-combo {
+  background: var(--secondary-color);
+  width: 90%;
+  max-width: 380px;
+  padding: 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .7rem;
+}
+
+.img-details{
+  width: 40%;
+}
+
+/* ---------------- DRESS CODE ---------------- */
+.dresscode-container {
+  background-image: url("../img/home_bg.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.info-container{
+  min-height: 60vh;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-color);
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.elementos-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* ---------------- CONTADOR ---------------- */
+.container {
+  gap: 2rem;
+}
+
+.countdown {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.countdown div {
+  min-width: 70px;
+}
+
+.countdown div span{
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--main-bg-color);
+  font-family: Baskerville;
+}
+
+.foto-pareja {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+/* ---------------- INFO ADICIONAL ---------------- */
+.info-adicional {
+  background-color:#274F37;
+}
+
+.texto {
+  min-height: 90%;
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-color);
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+/* ---------------- BOTONES ---------------- */
+button {
+  padding: 0.7rem 1.5rem;
+  border-radius: 5px;
+  border: 2px solid var(--main-bg-color);
+  background: var(--secondary-color);
+  color:var(--main-bg-color);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  width: 50%;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+#confirmar{
+  padding: 0.7rem 1.5rem;
+  border-radius: 5px;
+  background: var(--main-bg-color);
+  color:var(--secondary-color);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  width: 50%;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 768px) {
+  .img-details {
+    width: 50%;
+  }
+
+  .info-container {
+    width: 90%;
+  }
+
+  .countdown div span {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .invitation-card {
+    padding: 1.5rem;
+  }
+
+  .countdown {
+    gap: 0.5rem;
+  }
+}
