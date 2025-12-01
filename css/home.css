@@ -18,7 +18,8 @@ img {
 /* ---------------- FUENTES ---------------- */
 @font-face {
   font-family: Darleston;
-  src: url(fonts/Darleston.woff2) format('opentype');
+  src: url("../fonts/Darleston.otf") format("opentype"),
+       url("../fonts/Darleston.woff") format("woff");
 }
 
 @font-face {
@@ -251,3 +252,4 @@ button:hover {
     gap: 0.5rem;
   }
 }
+
